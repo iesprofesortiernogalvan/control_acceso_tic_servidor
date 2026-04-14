@@ -3,6 +3,13 @@ import time
 import threading
 import paho.mqtt.client as mqtt
 
+"""
+centro/tic1/nukihub/lock/state
+centro/tic1/nukihub/lock/battery/level
+centro/tic1/nukihub/lock/battery/critical
+centro/tic1/nukihub/lock/action
+"""
+
 # =========================================================
 # CONFIGURACIÓN
 # =========================================================
@@ -591,3 +598,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+
