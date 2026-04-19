@@ -45,6 +45,25 @@ NUKI_LOCK_BATTERY_VOLTAGE = f"{NUKI_BASE}/lock/battery/voltage"  # opcional
 FICHERO_PROFESORES = "profesores.csv"
 
 
+# -----------------------------
+# Timeout de seguridad
+# -----------------------------
+ACCION_TIMEOUT_S = 15
+
+# -----------------------------
+# Antirrebote de estados
+# Ignora un cambio si llega exactamente igual que uno
+# muy reciente ya notificado.
+# -----------------------------
+ESTADO_DEBOUNCE_S = 0.8
+
+# -----------------------------
+# Debug
+# -----------------------------
+DEBUG_MQTT_RX = False
+DEBUG_BATTERY = False
+USE_COLORS = True
+
 # =========================================================
 # LOG EN ARCHIVO CSV DIARIO
 # =========================================================
@@ -80,24 +99,7 @@ def registrar_acceso_csv(usuario, accion):
     except Exception as e:
         log_error(f"Error escribiendo log diario: {e}")
 
-# -----------------------------
-# Timeout de seguridad
-# -----------------------------
-ACCION_TIMEOUT_S = 15
 
-# -----------------------------
-# Antirrebote de estados
-# Ignora un cambio si llega exactamente igual que uno
-# muy reciente ya notificado.
-# -----------------------------
-ESTADO_DEBOUNCE_S = 0.8
-
-# -----------------------------
-# Debug
-# -----------------------------
-DEBUG_MQTT_RX = False
-DEBUG_BATTERY = False
-USE_COLORS = True
 
 
 # =========================================================
